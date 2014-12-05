@@ -1,4 +1,4 @@
-module Juice::API::Helpers
+module Juice::API::Helpers::Base
   extend Grape::API::Helpers
 
   params :pagination do

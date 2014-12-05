@@ -1,5 +1,5 @@
 class Juice::API < Grape::API
-  helpers Juice::API::Helpers
+  helpers Juice::API::Helpers::Base
 
   format :json
   version 'v1'
