@@ -1,16 +1,19 @@
-class Juice::API < Grape::API
-  helpers Juice::API::Helpers
+module Juice
+  class API < Grape::API
+    helpers Juice::Helpers::Pagination
 
-  format :json
-  version 'v1'
+    format :json
+    version 'v1'
 
-  desc 'dat list'
+    desc 'dat list'
 
-  params do
-    use :pagination
-  end
+    params do
+      use :pagination
+    end
 
-  get 'list' do
-    { list: ['stuff'] }
+    get 'list' do
+      { list: ['stuff'] }
+    end
   end
 end
+
